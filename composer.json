@@ -1,0 +1,29 @@
+{
+	"name": "sjones6/regex",
+	"description": "Object-oriented Regular Expression library",
+	"type": "library",
+	"keywords": ["regular expression", "RegEx", "object-oriented"],
+	"homepage": "https://github.com/sjones6/regex",
+	"license": "MIT",
+	"authors": [
+        {
+            "name": "Spencer Jones",
+            "email": "jones.spencera@gmail.com",
+            "homepage": "http://spenceralanjones.com",
+            "role": "Developer"
+        }
+    ],
+	"require": {
+		"php": ">=5.5.9",
+		"phpunit/phpunit": "^5.6",
+		"tightenco/collect": "^5.3"
+	},
+	"autoload": {
+		"psr-4": {
+			"RegEx\\": "src/regex/"
+		},
+		"classmap": [
+			"tests/"
+		]
+	}
+}
