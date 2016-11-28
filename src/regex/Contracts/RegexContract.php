@@ -1,6 +1,6 @@
 <?php
 
-namespace RegEx\Contracts;
+namespace Sjones6\Regex\Contracts;
 
 
 interface RegexContract
@@ -9,5 +9,9 @@ interface RegexContract
 	public function __construct($re);
 
 	public function test();
+
+	public function getMatches();
+
+	public function __toString();
 
 }
