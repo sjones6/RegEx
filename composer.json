@@ -20,10 +20,16 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"RegEx\\": "src/regex/"
+			"Sjones6\\Regex\\": "src/regex/"
 		},
 		"classmap": [
 			"tests/"
+		],
+		"files": [
+			"./regex.php"
 		]
+	},
+	"scripts": {
+		"test": "./vendor/bin/phpunit tests/"
 	}
 }
