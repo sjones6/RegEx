@@ -87,3 +87,12 @@ $matches->each(function(Sjones6\Regex\Results\SingleMatchResult $match, $key){
 ### Replacing
 
 In development...
+
+
+### Contributing, Issues, Testing, etc.
+
+PRs welcome. Include documentation and tests with all PRs.
+
+Issues accepted on Github.
+
+Tests use PHPUnit and can be run with `composer test` or `./vendor/bin/phpunit ./tests` (both from project root).
