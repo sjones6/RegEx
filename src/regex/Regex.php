@@ -33,15 +33,16 @@ class Regex implements RegexContract
 	* Checks whether or not a string
 	* matches with the regex
 	* 
-	* @param string | text ot check
+	* @param string | text to check
+	* @param integer | offset (in bytes) to start match
 	*
 	* @return bool | matches / doesnt
 	**/
-	public function test($text = '')
+	public function test($text = '', $offset = 0)
 	{
 
 		// Run the regular expression
-		return preg_match($this->re, $text) === 1; 
+		return preg_match($this->re, $text, $matches, PREG_OFFSET_CAPTURE, $offset) === 1; 
 
 	}
 
@@ -51,14 +52,15 @@ class Regex implements RegexContract
 	* Matches a string again re
 	* 
 	* @param string | text ot check
+	* @param integer | offset (in bytes) to start match
 	*
 	* @return object | Sjones6\Regex\Results\MatchResults
 	**/
-	public function match($text = '')
+	public function match($text = '', $offset = 0)
 	{
 
 		// Run the regular expression
-		preg_match_all($this->re, $text, $matches, PREG_OFFSET_CAPTURE);
+		preg_match_all($this->re, $text, $matches, PREG_OFFSET_CAPTURE, intval($offset));
 
 		// Set matches
 		$this->setMatches($matches);

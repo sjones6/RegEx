@@ -12,6 +12,14 @@ class MatchTest extends TestCase
 
 	}
 
+	public function test_match_test_with_offset_param()
+	{
+		
+		// Start 2000 bytes in
+		$this->assertEquals($this->re->match($this->getText(), 2000)->count(), 2);
+
+	}
+
 	public function test_match_and_get_count()
 	{
 
