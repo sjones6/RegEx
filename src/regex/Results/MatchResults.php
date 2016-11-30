@@ -61,10 +61,25 @@ class MatchResults implements MatchResultsContract
 	*
 	* @return object | Sjones6\Regex\Results\MatchResultBag
 	**/
-	public function each(\Closure $callable) {
+	public function each(\Closure $callable)
+	{
 
 		return $this->matches->each($callable);
 		
+	}
+
+	/**
+	* Handle array type coercion
+	*
+	* @param void
+	*
+	* @return array | matches array
+	**/
+	public function __toArray()
+	{
+
+		return $this->matches->toArray();
+
 	}
 		
 
