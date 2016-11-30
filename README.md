@@ -2,7 +2,7 @@
 
 An object-oriented Regular Expression library in PHP.
 
-Requires 5.6+.
+Requires PHP 5.6+.
 
 ### Installation
 
