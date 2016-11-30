@@ -173,7 +173,9 @@ class SingleMatchResult implements Contract
 			throw new \Exception('Memory matches must be retrieved by integer');
 		}
 
-		return $this->memoryMatches->get($nth);
+		$memoryMatch = $this->memoryMatches->get($nth);
+
+		return empty($memoryMatch) ? '' : $memoryMatch;
 	
 	}
 
