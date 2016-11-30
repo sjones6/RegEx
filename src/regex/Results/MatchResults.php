@@ -3,6 +3,7 @@
 namespace Sjones6\Regex\Results;
 
 // Regex
+use Sjones6\Regex\Results\SingleMatchResult;
 use Sjones6\Regex\Results\MatchResultBag;
 
 
@@ -51,5 +52,20 @@ class MatchResults implements MatchResultsContract
 		return $this->matches->get($nth);
 
 	}
+
+
+	/**
+	* Iterate through matches
+	*
+	* @param object | Closure
+	*
+	* @return object | Sjones6\Regex\Results\MatchResultBag
+	**/
+	public function each(\Closure $callable) {
+
+		return $this->matches->each($callable);
+		
+	}
+		
 
 }
