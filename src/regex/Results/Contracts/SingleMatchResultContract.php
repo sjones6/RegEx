@@ -21,4 +21,6 @@ interface SingleMatchResultContract
 	public function memoryMatch($nth);
 
 	public function memory($nth);
+
+	public function __toString();
 }

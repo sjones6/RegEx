@@ -178,6 +178,18 @@ class SingleMatchResult implements Contract
 		return $this->memoryMatch($nth);
 	
 	}
+
+	/**
+	* Handle string type coercion
+	*
+	* @param void
+	* 
+	* @return string | full match text
+	**/
+	public function __toString()
+	{
+		return $this->fullMatch;
+	}
 		
 
 }
