@@ -41,6 +41,26 @@ class MatchTest extends TestCase
 
 	}
 
+
+	public function test_iterating_over_matches_and_single_match_methods()
+	{
+
+		$this->re->match($this->getText())->each(function(Sjones6\Regex\Results\SingleMatchResult $match, $key) {
+
+			// Full match text
+			$this->assertTrue(!empty($match->full()));
+
+			// Offset methods
+			$this->assertGreaterThan(-1, $match->getOffset());
+			$this->assertGreaterThan(-1, $match->offset());
+
+			// Test have memory matches
+			$this->assertTrue($match->haveMemoryMatches());
+
+		});
+
+	}
+
 	public function test_match_and_get_first_result()
 	{
 
