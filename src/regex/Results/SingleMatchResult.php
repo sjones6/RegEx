@@ -79,6 +79,20 @@ class SingleMatchResult implements Contract
 	}
 
 	/**
+	* Convenience method for getOffset 
+	*
+	* @param void
+	*
+	* @return int | offset of match result
+	**/
+	public function offset()
+	{
+
+		return $this->getOffset();
+
+	}
+
+	/**
 	* Gets the full match text
 	*
 	* @param void
@@ -125,7 +139,7 @@ class SingleMatchResult implements Contract
 	**/
 	public function haveMemoryMatches()
 	{
-		return $this->memoryMatches->isEmpty();
+		return ! $this->memoryMatches->isEmpty();
 	}
 
 
