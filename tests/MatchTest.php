@@ -61,6 +61,24 @@ class MatchTest extends TestCase
 
 	}
 
+	public function test_matches_type_coercion_to_array_and_single_result_coercion_to_string()
+	{
+
+		foreach ($this->matches as $match) {
+
+			$this->assertTrue(!empty((string)$match));
+
+		}
+
+	}
+
+	public function test_single_match_result_return_string_for_memory_match_that_doesnt_exist()
+	{
+
+		$this->assertTrue($this->matches->nth(1)->memoryMatch(15) === '');
+
+	}
+
 	public function test_match_and_get_first_result()
 	{
 
