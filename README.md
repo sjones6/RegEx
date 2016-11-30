@@ -64,7 +64,7 @@ $abcRe->test('some random string'); // false
 $matches = $abcRe->match('abcdefg'); // MatchResult object
 
 $matches->count(); // Number of matches
-
+```
 
 ##### Working with match results
 
