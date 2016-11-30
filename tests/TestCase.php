@@ -13,7 +13,7 @@ abstract class TestCase extends PHPUnit
 {
 
 	/**
-	* @var object | Regex\Regex
+	* @var object | Sjones6\Regex
 	**/
 	protected $re;
 
@@ -21,6 +21,11 @@ abstract class TestCase extends PHPUnit
 	* @var string | raw regext
 	**/
 	public $rawRe = '/(metus)\s+(\w+)/';
+
+	/**
+	* @var object | Sjones6\Regex\Results\MatchResults
+	**/
+	protected $matches;
 
 	/**
 	* @var string | Text to test against
@@ -39,7 +44,11 @@ Mauris vitae orci feugiat, gravida eros sit amet, placerat justo. Mauris sit ame
 
 	public function setUp()
 	{
+		
 		$this->re = re($this->rawRe);
+
+		$this->matches = $this->re->match($this->getText());
+
 	}
 
 	public function getText()
